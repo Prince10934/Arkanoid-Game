@@ -1,14 +1,14 @@
 import { Vector } from "../types.js";
 export class Ball{
-    constructor(ballSize,position,speed,image){
+    constructor(speed,ballSize,position,image){
+        this.ballImage=new Image();
+        this.ballImage.src=image;
         this.ballSize=ballSize;
         this.position=position;
         this.speed={
             x:speed,
             y:-speed
         };
-        this.image=new Image();
-        this.image.src=image;
     }
     //getters
     get width(){
@@ -21,7 +21,7 @@ export class Ball{
         return this.position;
     }
     get image(){
-        return this.image;
+        return this.ballImage;
     }
     //Methods
     changeYDirection(){
