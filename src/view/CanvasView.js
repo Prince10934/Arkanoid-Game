@@ -32,7 +32,7 @@ export class CanvasView {
         }
     }
     drawSprite(brick) {
-        if (!brick) {
+        if (brick===undefined) {
             return;
         }
         this.context.drawImage(
